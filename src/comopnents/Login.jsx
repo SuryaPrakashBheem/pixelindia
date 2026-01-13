@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { login } from "../services/Auth";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -20,6 +21,8 @@ const Login = () => {
     });
   };
 
+  
+
   const validate = () => {
     if (!/^[6-9]\d{9}$/.test(formData.mobile)) {
       return "Enter a valid 10-digit mobile number";
@@ -33,7 +36,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-
+    console.log(formData.mobile,formData.password)
     const validationError = validate();
     if (validationError) {
       setError(validationError);
@@ -44,7 +47,10 @@ const Login = () => {
       setLoading(true);
 
       // 🔹 Replace with real API
-      const response = await axios.post("/login", formData);
+      const response = await login({
+        "email":formData.mobile,
+        "password":formData.password
+      });
 
       // Example success flow
       if (response.status === 200) {
@@ -93,7 +99,7 @@ const Login = () => {
 
 const styles = {
   container: {
-    minHeight: "100vh",
+    minHeight: "50vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

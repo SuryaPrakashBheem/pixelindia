@@ -24,8 +24,7 @@ const ProductPage = () => {
 
   return (
     <>
-      <TopBar/>
-      <Header/>
+    
 
       <div className="container">
         {/* Breadcrumb */}

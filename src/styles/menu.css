@@ -1,0 +1,157 @@
+/* Mega Menu Container */
+.mega-menu {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  position: relative;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu > .menu-item {
+  position: relative;
+  margin-right: 10px; /* smaller spacing between top-level items */
+}
+
+.menu > .menu-item:last-child {
+  margin-right: 0;
+}
+
+.menu > .menu-item > a,
+.menu > .menu-item > span {
+  padding: 8px 12px; /* smaller padding */
+  display: block;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
+
+.menu > .menu-item:hover > a,
+.menu > .menu-item:hover > span {
+  color: #0068B4;
+}
+
+/* Dropdown Container */
+.mega-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 1200px; /* mega menu width */
+  display: none;
+  flex-wrap: wrap; /* wrap columns if needed */
+  background: #fff;
+  padding: 10px 15px; /* smaller padding */
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  max-height: 500px; /* optional, prevents huge menu */
+  overflow: auto; /* scroll if too long */
+}
+
+.menu-item:hover .mega-dropdown {
+  display: flex;
+  justify-content: flex-start; /* align columns from left */
+}
+
+/* Mega Columns */
+.mega-column {
+  flex: 1 1 160px;   /* 🔽 smaller column width */
+  margin-right: 2px; /* 🔽 minimal gap */
+  display: flex;
+  flex-direction: column;
+}
+
+.mega-column:last-child {
+  margin-right: 0;
+}
+
+.mega-column h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 5px; /* smaller spacing */
+}
+
+/* Subcategory list with wrapping */
+.mega-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* wrap subcategories */
+}
+
+.mega-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  column-count: 2;        /* number of columns */
+  column-gap: 10px;       /* space between columns */
+}
+
+.mega-column ul li {
+  width: 100%;
+  margin-bottom: 2px;   /* 🔽 reduced from 4px */
+  break-inside: avoid;
+}
+
+.mega-column ul li a {
+  color: #555;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.mega-column ul li a:hover {
+  color: #0068B4;
+}
+
+
+.mega-column ul li a {
+  color: #555;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.mega-column ul li a:hover {
+  color: #0068B4;
+}
+
+/* Sub-subcategories */
+.sub-subcategory {
+  margin-left: 8px;
+  margin-top: 2px;
+}
+
+.sub-subcategory li a {
+  font-size: 12px;
+  color: #666;
+}
+
+.sub-subcategory li a:hover {
+  color: #0068B4;
+}
+
+/* Navigation Background */
+nav {
+  background: #fff;
+  padding: 5px 10px;
+}
+
+/* Optional: main nav links */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 5px; /* smaller gap */
+  align-items: center;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}

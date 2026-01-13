@@ -1,0 +1,266 @@
+/* privacypolicy.css - Full Screen Fit */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.privacy-page {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+.privacy-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 20px;
+    margin: 0;
+}
+
+.privacy-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.privacy-main-title {
+    color: #0068B4;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #0068B4;
+    width: 100%;
+}
+
+/* h4 styling for main title */
+.privacy-main-title {
+    font-size: 28px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.section-title {
+    margin: 25px 0 12px 0;
+    width: 100%;
+}
+
+/* h5 styling for section titles */
+.section-title h5 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    width: 100%;
+}
+
+.content-box {
+    background-color: #fff;
+    /* border: 1px solid #e0e0e0; */
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    width: 100%;
+       font-weight: 500;
+    /* OR */
+    font-weight: bold;
+}
+
+.content-box p {
+    color: #444;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: justify;
+    width: 100%;
+}
+
+.content-box p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-details {
+    background-color: #f8f9fa;
+    border-left: 4px solid #0068B4;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.contact-details p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+    width: 100%;
+}
+
+.contact-details strong {
+    color: #0068B4;
+    min-width: 70px;
+    display: inline-block;
+}
+
+.last-updated {
+    color: #666;
+    font-style: italic;
+    padding-top: 15px;
+    margin-top: 20px;
+    border-top: 1px solid #eaeaea;
+    font-size: 13px;
+    width: 100%;
+}
+
+/* Full width for larger screens */
+@media (min-width: 1200px) {
+    .privacy-container {
+        padding: 30px 40px;
+    }
+    
+    .content-box {
+        padding: 25px 30px;
+    }
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+    .privacy-container {
+        padding: 20px 15px;
+    }
+    
+    .privacy-main-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .section-title {
+        margin: 20px 0 10px 0;
+    }
+    
+    .section-title h5 {
+        font-size: 16px;
+    }
+    
+    .content-box {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .content-box p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    
+    .contact-details {
+        padding: 12px 15px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .privacy-page {
+        padding: 0;
+    }
+    
+    .privacy-container {
+        padding: 15px 12px;
+    }
+    
+    .privacy-main-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+        padding: 0 0 12px 0;
+    }
+    
+    .content-box {
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 3px;
+    }
+    
+    .content-box p {
+        font-size: 12px;
+        line-height: 1.5;
+        text-align: left;
+    }
+    
+    .contact-details {
+        padding: 10px 12px;
+        margin: 15px 0;
+    }
+    
+    .contact-details p {
+        font-size: 12px;
+    }
+    
+    .last-updated {
+        font-size: 11px;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+    .privacy-container {
+        padding: 12px 10px;
+    }
+    
+    .privacy-main-title {
+        font-size: 20px;
+    }
+    
+    .section-title h5 {
+        font-size: 14px;
+    }
+    
+    .content-box {
+        padding: 10px;
+    }
+    
+    .content-box p {
+        font-size: 11px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .privacy-page {
+        background: white;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .privacy-container {
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .content-box {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+    }
+    
+    .privacy-main-title {
+        color: #000;
+    }
+}
+
+/* Remove any max-width constraints */
+.privacy-container,
+.privacy-content,
+.content-box,
+.section-title,
+.section-title h5,
+.content-box p {
+    max-width: 100% !important;
+}

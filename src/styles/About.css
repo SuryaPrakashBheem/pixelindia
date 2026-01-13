@@ -1,0 +1,385 @@
+/* About.css - With Reduced Padding */
+
+/* ===== BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* ===== CONTAINER ===== */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HERO SECTION - REDUCED PADDING ===== */
+.hero-section {
+    background: linear-gradient(135deg, rgba(164, 217, 255, 0.9) 0%, rgba(0, 86, 154, 0.9) 100%), 
+                url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px; /* Reduced from 120px */
+    text-align: center;
+    margin-bottom: 40px; /* Reduced from 80px */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 65%, rgba(255, 255, 255, 0.1) 65%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem; /* Reduced from 3.5rem */
+    font-weight: 800;
+    margin-bottom: 15px; /* Reduced from 20px */
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-tagline {
+    font-size: 1.3rem; /* Reduced from 1.5rem */
+    font-weight: 300;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ===== SECTION STYLES - REDUCED PADDING ===== */
+.about-section {
+    margin-bottom: 30px; /* Reduced from 60px */
+    padding: 30px 0; /* Reduced from 50px */
+}
+
+.section-title {
+    color: #0068B4;
+    font-size: 1.8rem; /* Reduced from 2.2rem */
+    font-weight: 700;
+    margin-bottom: 20px; /* Reduced from 30px */
+    padding-bottom: 10px; /* Reduced from 15px */
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px; /* Reduced from 80px */
+    height: 3px; /* Reduced from 4px */
+    background: #0068B4;
+    border-radius: 2px;
+}
+
+.content-box {
+    background: white;
+    padding: 30px; /* Reduced from 50px */
+    border-radius: 8px; /* Reduced from 12px */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Lighter shadow */
+    margin-bottom: 25px; /* Reduced from 40px */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #0068B4; /* Reduced from 5px */
+}
+
+.content-box:hover {
+    transform: translateY(-3px); /* Reduced from -5px */
+    box-shadow: 0 8px 25px rgba(0, 104, 180, 0.1); /* Reduced */
+}
+
+.content-text {
+    font-size: 1rem; /* Reduced from 1.1rem */
+    line-height: 1.7; /* Reduced from 1.8 */
+    color: #555;
+    margin-bottom: 15px; /* Reduced from 20px */
+}
+
+.content-text:last-child {
+    margin-bottom: 0;
+}
+
+.highlight {
+    color: #0068B4;
+    font-weight: 600;
+}
+
+/* ===== VALUES SECTION - REDUCED PADDING ===== */
+.values-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 50px 0; /* Reduced from 80px */
+    border-radius: 12px; /* Reduced from 20px */
+    margin: 40px 0; /* Reduced from 80px */
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Reduced from 300px */
+    gap: 25px; /* Reduced from 40px */
+    margin-top: 30px; /* Reduced from 50px */
+}
+
+.value-card {
+    background: white;
+    padding: 25px 20px; /* Reduced from 40px 30px */
+    border-radius: 8px; /* Reduced from 12px */
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05); /* Lighter shadow */
+    transition: all 0.3s ease;
+    border-top: 3px solid transparent; /* Reduced from 4px */
+}
+
+.value-card:hover {
+    transform: translateY(-5px); /* Reduced from -10px */
+    box-shadow: 0 8px 25px rgba(0, 104, 180, 0.08); /* Reduced */
+    border-top-color: #0068B4;
+}
+
+.value-icon {
+    background: linear-gradient(135deg, #0068B4, #00579a);
+    color: white;
+    width: 70px; /* Reduced from 80px */
+    height: 70px; /* Reduced from 80px */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px; /* Reduced from 25px */
+    font-size: 28px; /* Reduced from 34px */
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+    transform: scale(1.08) rotate(5deg); /* Reduced from 1.1 */
+}
+
+.value-title {
+    color: #0068B4;
+    font-size: 1.3rem; /* Reduced from 1.5rem */
+    font-weight: 700;
+    margin-bottom: 12px; /* Reduced from 15px */
+}
+
+.value-description {
+    color: #666;
+    line-height: 1.6; /* Reduced from 1.7 */
+    font-size: 0.95rem; /* Reduced from 1rem */
+}
+
+/* ===== STATS SECTION - REDUCED PADDING ===== */
+.stats-section {
+    background: #0068B4;
+    color: white;
+    padding: 50px 0; /* Reduced from 80px */
+    border-radius: 12px; /* Reduced from 20px */
+    margin: 40px 0; /* Reduced from 80px */
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Reduced from 200px */
+    gap: 25px; /* Reduced from 40px */
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem; /* Reduced from 3rem */
+    font-weight: 800;
+    margin-bottom: 8px; /* Reduced from 10px */
+}
+
+.stat-item p {
+    font-size: 1rem; /* Reduced from 1.1rem */
+    opacity: 0.9;
+}
+
+/* ===== WHY CHOOSE US SECTION - COMPACT ===== */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Reduced from 250px */
+    gap: 20px; /* Reduced from 30px */
+    margin-top: 20px; /* Reduced from 30px */
+}
+
+.feature-item {
+    text-align: center;
+    padding: 20px 15px; /* Reduced padding */
+}
+
+.feature-item h3 {
+    color: #0068B4;
+    margin-bottom: 8px; /* Reduced from 10px */
+    font-size: 1.2rem; /* Reduced */
+}
+
+.feature-item p {
+    font-size: 0.9rem; /* Reduced */
+    line-height: 1.5; /* Reduced */
+}
+
+/* ===== CTA BUTTON - COMPACT ===== */
+.cta-button {
+    display: inline-block;
+    background: #0068B4;
+    color: white;
+    padding: 12px 28px; /* Reduced from 14px 35px */
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem; /* Reduced from 1.1rem */
+    transition: all 0.3s ease;
+    border: 2px solid #0068B4;
+    margin-top: 20px; /* Reduced from 30px */
+}
+
+.cta-button:hover {
+    background: transparent;
+    color: #0068B4;
+    transform: translateY(-2px); /* Reduced from -3px */
+    box-shadow: 0 6px 18px rgba(0, 104, 180, 0.15); /* Reduced */
+}
+
+/* ===== RESPONSIVE DESIGN - ADJUSTED ===== */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 2.3rem; /* Reduced */
+    }
+    
+    .hero-tagline {
+        font-size: 1.2rem; /* Reduced */
+    }
+    
+    .content-box {
+        padding: 25px; /* Reduced */
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 20px; /* Reduced from 80px */
+        margin-bottom: 30px; /* Reduced from 60px */
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem; /* Reduced */
+    }
+    
+    .section-title {
+        font-size: 1.6rem; /* Reduced */
+    }
+    
+    .content-box {
+        padding: 20px; /* Reduced */
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 20px; /* Reduced */
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /* Reduced */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 1.7rem; /* Reduced */
+    }
+    
+    .hero-tagline {
+        font-size: 1rem; /* Reduced */
+    }
+    
+    .about-section {
+        padding: 20px 0; /* Reduced from 30px */
+    }
+    
+    .content-box {
+        padding: 18px 15px; /* Reduced */
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px; /* Reduced */
+    }
+    
+    .stat-item h3 {
+        font-size: 2rem; /* Reduced */
+    }
+}
+
+/* ===== UTILITY CLASSES - ADJUSTED ===== */
+.mb-20 {
+    margin-bottom: 15px; /* Reduced from 20px */
+}
+
+.mb-30 {
+    margin-bottom: 20px; /* Reduced from 30px */
+}
+
+.mt-40 {
+    margin-top: 25px; /* Reduced from 40px */
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Reduced from 30px */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-box, .value-card, .stat-item {
+    animation: fadeInUp 0.5s ease-out forwards; /* Faster animation */
+}
+
+/* ===== EXTRA COMPACT VERSION (OPTIONAL) ===== */
+/* If you want even more compact, add this class to your sections */
+.compact-section {
+    margin-bottom: 20px !important;
+    padding: 20px 0 !important;
+}
+
+.compact-box {
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+/* Quick fix: Remove team section if not needed */
+.team-section {
+    display: none; /* Hide team section to reduce length */
+}

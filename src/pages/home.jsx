@@ -1,19 +1,15 @@
 // Home.jsx
 import "../styles/home.css";
-import TopBar from "../comopnents/TopBar";
-import Header from "../comopnents/Header";
-import ProductPage from "./productdetail";
+
 import HeroSection from "../comopnents/HeroSection";
 import PromoCards from "../comopnents/PromoCards";
 import BestsellerSection from "./bestseller";
-import Footer from "../comopnents/Footer";
+
 
 const Home = () => {
   return (
     <>
-      <TopBar />
-      <Header />
-      
+
       <HeroSection />
       <PromoCards />
       <BestsellerSection />
@@ -71,7 +67,7 @@ const Home = () => {
       <ProductPage />
 
       {/* Footer */}
-      <Footer />
+
     </>
   );
 };
