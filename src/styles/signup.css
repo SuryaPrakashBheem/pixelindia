@@ -1,0 +1,152 @@
+  /* -------- Reset / Base -------- */
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fa;
+}
+
+/* -------- Container -------- */
+.signup {
+  max-width: 420px;
+  margin: 60px auto;
+  background: #ffffff;
+  padding: 32px 28px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* -------- Header -------- */
+.signup h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* -------- Inputs -------- */
+.signup input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.signup input::placeholder {
+  color: #9ca3af;
+}
+
+.signup input:focus {
+  border-color: #0068B4;
+  box-shadow: 0 0 0 2px rgba(0, 155, 119, 0.15);
+}
+
+/* Disabled input */
+.signup input:disabled {
+  background: #f3f4f6;
+  cursor: not-allowed;
+}
+
+/* -------- Buttons -------- */
+.signup button {
+  width: 100%;
+  padding: 13px;
+  border-radius: 8px;
+  border: none;
+  background: #0068B4;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.05s ease;
+}
+
+.signup button:hover {
+  background: #007f61;
+}
+
+.signup button:active {
+  transform: scale(0.98);
+}
+
+.signup button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* -------- Error Text -------- */
+.signup .error {
+  color: #dc2626;
+  font-size: 14px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* -------- OTP Section -------- */
+.otp-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0;
+}
+
+.otp-row input {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.otp-row input:focus {
+  border-color: #0068B4;
+  box-shadow: 0 0 0 2px rgba(0, 155, 119, 0.2);
+}
+
+/* -------- Resend Timer -------- */
+.signup p {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+/* -------- Login Link -------- */
+.signup .link {
+  margin-top: 18px;
+  text-align: center;
+  color: #0068B4;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.signup .link:hover {
+  text-decoration: underline;
+}
+
+/* -------- Mobile Responsive -------- */
+@media (max-width: 480px) {
+  .signup {
+    margin: 20px;
+    padding: 24px 20px;
+  }
+
+  .otp-row input {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+
+

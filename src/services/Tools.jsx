@@ -3,7 +3,7 @@ import Axios from "./Axios";
 // 🔍 Search API
 export const fetchSearchResultsAPI = async (queryParam) => {
   try {
-    const response = await Axios.get(`/search/?search=${queryParam}`);
+    const response = await Axios.get(`/search/?search=${encodeURIComponent(queryParam)}`);
     console.log("Search Results API:", response.data);
     return response.data;
   } catch (error) {

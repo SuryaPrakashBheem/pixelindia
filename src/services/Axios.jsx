@@ -14,17 +14,17 @@ const Axios = axios.create({
 });
 
 // Add request interceptor to include token
-// Axios.interceptors.request.use(
-//   async (config) => {
-//     const token = await AsyncStorage.getItem('accessid');
-//     if (token) {
-//       config.headers.Authorization = `Bearer ${token}`;
-//     }
-//     return config;
-//   },
-//   (error) => {
-//     return Promise.reject(error);
-//   }
-// );
+Axios.interceptors.request.use(
+  async (config) => {
+      const token =localStorage.getItem('token')
+    if (token) {
+      config.headers.authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 export default Axios;

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import { login } from "../services/Auth";
 
 const Login = () => {
@@ -21,7 +20,7 @@ const Login = () => {
     });
   };
 
-  
+
 
   const validate = () => {
     if (!/^[6-9]\d{9}$/.test(formData.mobile)) {
@@ -36,7 +35,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    console.log(formData.mobile,formData.password)
+    console.log(formData.mobile, formData.password)
     const validationError = validate();
     if (validationError) {
       setError(validationError);
@@ -48,13 +47,22 @@ const Login = () => {
 
       // 🔹 Replace with real API
       const response = await login({
-        "email":formData.mobile,
-        "password":formData.password
+        "email": formData.mobile,
+        "password": formData.password
       });
 
       // Example success flow
-      if (response.status === 200) {
-        navigate("/dashboard");
+      if (response.status === 'Ok') {
+
+        localStorage.setItem('token', response.access);
+        localStorage.setItem('userId', response.userid);
+        localStorage.setItem('userName',response.username);
+        localStorage.setItem('name',response.first_name);
+         localStorage.setItem('Mobile',response.Mobile);
+          localStorage.setItem('GST',response.GST);
+           localStorage.setItem('usertype',response.usertype);
+
+        navigate("/");
       }
     } catch (err) {
       setError("Invalid mobile number or password");

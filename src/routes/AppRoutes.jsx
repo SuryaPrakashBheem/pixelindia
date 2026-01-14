@@ -5,7 +5,9 @@ import ProductPage from "../pages/productdetail";
 import Shop from "../pages/shop";
 import About from"../pages/About";
 import PrivacyPolicy from "../comopnents/PrivacyPolicy";
+import PixelProfile from "../comopnents/profile";
 import TermsConditions from "../comopnents/Termsconditions";
+import SearchResults from "../pages/SearchResults";
 
 
 const AppRoutes = () => {
@@ -14,6 +16,8 @@ const AppRoutes = () => {
         <Route path="/" element={<Home />} />
          <Route path="/productdetail" element={<ProductPage />} />
        <Route path="/Shop" element={<Shop/>} />
+       <Route path="/profile" element={<PixelProfile/>}/>
+         <Route path="/search" element={<SearchResults />} />
         <Route path="/About" element={<About/>}/>
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="*" element={<Navigate to="/login" />} />
